@@ -1,6 +1,7 @@
 const express = require('express');
 const pool = require('./db');
 const PORT = 3000;
+const path = require('path');
 
 const app = express();
 
@@ -14,6 +15,10 @@ app.get('/', async (req, res) => {
 		console.log(err);
 		res.sendStatus(500);
 	}
+});
+
+app.get('/testHTML', (req, res) => {
+	res.sendFile(path.join(__dirname, '/test.html'));
 });
 
 app.post('/', async (req, res) => {
