@@ -14,6 +14,7 @@ Content-Type: application/json
     "location": "46 hello world street"
 }
 
+### 
 POST http://localhost:3000/user/
 Content-Type: application/json
 
